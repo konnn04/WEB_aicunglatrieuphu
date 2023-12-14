@@ -57,7 +57,6 @@ window.onload = ()=>{
             document.body.onclick = null
         }
     }
-    // 
 }
 
 function PlayIntro(DOM) {
