@@ -823,6 +823,7 @@ function runScriptCalling(index,CONFIG,AUDIO){
         }
 
         if (t >= 22 ) {
+            calling = false
             playSound(AUDIO.s_dis,0,null,false,0.6)
             $("#helper2").removeClass("chat")
             clearInterval(document.TIMER.call)
