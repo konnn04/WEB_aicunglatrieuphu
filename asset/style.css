@@ -567,7 +567,8 @@ body{
     display: none;
 }
 
-#gameover {
+#gameover,
+#win {
     position: fixed;
     top: 0;bottom: 0;left: 0;right: 0;
     display: flex;
@@ -577,6 +578,7 @@ body{
     color: #fff;
 }
 
-#gameover h1{
+#gameover h1,
+#win h1{
     font-size: 3rem;
 }

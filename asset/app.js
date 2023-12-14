@@ -78,7 +78,6 @@ function PlayFirstStage(DOM, AUDIO, CONFIG) {
     setTimeout(()=>{
         playSound(AUDIO.m_q1_5,0,null,true,.5)
         CONFIG.music = AUDIO.m_q1_5
-        CONFIG.current=0
         // pauseFirstStage(DATA,CONFIG,AUDIO)
         // pauseSecondStage(DATA,CONFIG,AUDIO)
         importFirstContent(DATA,CONFIG,AUDIO)
@@ -248,13 +247,15 @@ function importLastContent(DATA,CONFIG,AUDIO) {
     //reset
     $("#helper3").removeClass("show")
 
-    let DATA2 = mergeQuestion(DATA[CONFIG.current],CONFIG.current)
-    CONFIG.a = DATA2.p
-
     if (CONFIG.current >=15) {
         pauseLastStage(DATA,CONFIG,AUDIO)
         return
     }
+
+    let DATA2 = mergeQuestion(DATA[CONFIG.current],CONFIG.current)
+    CONFIG.a = DATA2.p
+
+    
 
     CONFIG.music = AUDIO.m_q11_15
     playSound(AUDIO.m_q11_15,0,null,false,.4)
@@ -315,7 +316,7 @@ function importLastContent(DATA,CONFIG,AUDIO) {
                     stopSound(AUDIO.s_q11_15_fa)
                     gameOver(CONFIG)
                 }
-            },4000)
+            },w)
         }
     },100)
 }
@@ -323,8 +324,25 @@ function importLastContent(DATA,CONFIG,AUDIO) {
 function pauseLastStage(DATA,CONFIG,AUDIO) {
     $("#gameplay").addClass("show-level")
     $("#current-level div p ").text("150.000.000d")
-    $("#ask .confirm:nth-child(2)").css({"display":"hidden"})
+    $("#ask").hide();
+    let s = 0
+    CONFIG.checkpoint.forEach((e,i)=>{
+        s+=e
+    })
+    s = s.toFixed(2)
+    setTimeout(()=>{
+        $("main").html(WIN.replace("#time",s + " giây"))
+        $("#bg").html(`<video src="./asset/video/Here comes the money - meme.mp4" loop autoplay muted></video> `)
+    },3000)
 }
+
+const WIN = `
+    <div id="win">
+        <h1>BẠN ĐÃ TRỞ THÀNH TỈ PHÚ</h1>
+        <h3>Bạn đã ẳm về 150.000.000đ</h3>
+        <p>Thời gian để thành tỉ phú: #time</p>
+    </div>
+`
 
 function pauseSecondStage(DATA,CONFIG,AUDIO) {
     $("#gameplay").addClass("show-level")
@@ -854,7 +872,7 @@ function mergeQuestion(data,index) {
 
 function gameOver(CONFIG) {
     setTimeout(()=>{
-        $("main").html( GAMEOVER.replace("phanthuong",["bàn tay trắng :))","5.000.000 đồng","20.000.000 đồng"][CONFIG.current % 5]))
+        $("main").html( GAMEOVER.replace("phanthuong",["bàn tay trắng :))","5.000.000 đồng","20.000.000 đồng"][Math.floor(CONFIG.current / 5)]))
     },5000)
 }
 
