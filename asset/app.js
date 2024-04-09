@@ -403,58 +403,58 @@ function initEventGame(CONFIG,AUDIO){
 
 const DATA = [
     {
-        q:"1+2=",
-        a:[3,2,1,4]
+        q:"Tiến trình là gì?",
+        a:["Là một chương trình đang được thực thi","Là một tập tin được lưu trữ trên đĩa","Là một thiết bị ngoại vi","Là một phần của CPU"]
     },
     {
-        q:"Chicken nghĩa tiếng việt gọi là gì?",
-        a:["Vịt","Gà","Lợn","Ngỗng"]
+        q:"Hệ điều hành nào sau đây <b>không</b> thuộc hệ điều hành cho thiết bị di động",
+        a:["iOS","Linux","Android","Windows Phone"]
     },{
-        q:"Quyền nào không phải của em",
-        a:["Quyền lợi","Quyền hạn","Quyền anh","Quyền riêng tư"]
+        q:"Thành phần nào không thuộc phần cứng máy tính?",
+        a:["CPU","RAM","Hệ điều hành","BIOS"]
     },
     {
-        q:"Đâu là một loài hoa",
-        a:["Thước","Bút","Tẩy","Giấy"]
+        q:"Chức năng cơ bản của máy tính bao gồm những gì?",
+        a:["Xử lý dữ liệu.","Lưu trữ dữ liệu.","Di chuyển dữ liệu.","3 phương án điều đúng"]
     },
     {
-        q:"Có một ông sư bị bệnh, ba ông sư tới thăm bệnh, hỏi có mấy ông sư",
-        a:[2,4,3,1]
+        q:"Hệ điều hành là gì?",
+        a:["Một chương trình/hệ chương trình hoạt động giữa người sử dụng và phần cứng của máy tính.","Một chương trình giúp người sử dụng chơi game.","Một chương trình giúp người sử dụng soạn thảo văn bản.","Một chương trình giúp người sử dụng lướt web."]
     },
     {
-        q:"''Cá gì đầu bẹp có râu. Cả đời ẩn dưới bùn sâu kiếm mồi''?",
-        a:["Cá kiếm","Cá trê","Cá quả","Cá chép"]
+        q:"Máy tính thế hệ nào sử dụng đèn điện tử chân không?",
+        a:["Thế hệ 2 (1955 - 1965)","Thế hệ 1 (1945 - 1955)","Thế hệ 3 (1965 - 1980)","Thế hệ 4 (từ 1980)"]
     },{
-        q:"Loài chim nào có kích thước mắt to hơn bộ não của chính nó?",
-        a:["Diều hâu","Đại bàng","Đà điểu","Cú mèo"]
+        q:"Hệ điều hành phân tán là gì?",
+        a:["Hệ điều hành cho phép chia sẻ tài nguyên giữa các máy tính.",". Hệ điều hành cho phép quản lý và điều khiển các thiết bị mạng.","Hệ điều hành cho phép phân chia các chức năng của hệ điều hành trên nhiều máy tính.","3 phương án còn lại điều đúng"]
     },
     {
-        q:"Đâu không là một mô hình ngôn ngữ lớn AI",
-        a:["GPT","Compilot","Bard","Simsimi"]
+        q:"Monitor bao gồm những thành phần nào?",
+        a:["Một hoặc nhiều thủ tục (procedure).","Một đoạn code khởi tạo (initialization code).","Các biến dữ liệu cục bộ (local data variable).","3 phương án còn lại điều đúng"]
     },{
-        q:"Tokisaki Kurumi là nhân vật anime, có mắt bên trái màu gì?",
-        a:["Vàng","Đỏ","Xanh","Đen"]
+        q:"Khi tiến trình yêu cầu tài nguyên, điều gì sẽ xảy ra nếu tài nguyên không có sẵn?",
+        a:["Tiến trình sẽ chuyển sang trạng thái chờ.","Tiến trình sẽ bị kết thúc.","Tiến trình sẽ tiếp tục thực thi.","Hệ thống sẽ bị lỗi."]
     },
     {
-        q:"Thám tử lừng danh Conan là một series manga trinh thám được sáng tác bởi?",
-        a:["Oda Eiichiro","Aoyama Gōshō","Akutami Gege","Gojo Satoru"]
+        q:"Loại màn hình nào phổ biến nhất hiện nay?",
+        a:["CRT","LCD","LED","OLED"]
     },{
-        q:"Đâu không là nhân vật trong Anime Kimetsu no Yaiba",
-        a:["Kamado Tanjiro","Kamado Nezuko","Hyuga Hinata","Hashibira Inosuke"]
+        q:"Hệ điều hành có vai trò gì trong việc quản lý tài nguyên hệ thống?",
+        a:["Giúp người sử dụng dễ dàng sử dụng các tài nguyên hệ thống.","Giúp máy tính chạy nhanh hơn.","Giúp các chương trình có thể hoạt động chính xác và hiệu quả.","Giúp máy tính tiết kiệm năng lượng."]
     },
     {
-        q:"T1 (Hàn Quốc) đang là đội có thành tích tốt nhất lịch sử giải đấu với",
-        a:["1","2","3","4"]
+        q:"PCB đóng vai trò gì trong hệ điều hành?",
+        a:["Giúp hệ điều hành lập lịch và điều phối các tiến trình","Giúp hệ điều hành theo dõi và kiểm soát việc sử dụng tài nguyên của các tiến trình","Cho phép hệ điều hành xử lý các yêu cầu I/O của các tiến trình","3 phương án còn lại điều đúng"]
     },{
-        q:"Hội chứng nào mô tả trạng thái tâm lý trong đó con tin lâu ngày hình thành tình cảm với kẻ bắt cóc trong thời gian bị giam cầm?",
-        a:["Hội chứng Stockholm"," Hội chứng Paris","Hội chứng Lima","Hội chứng Tokyo"]
+        q:"Semaphore có liên quan gì đến đa luồng?",
+        a:["Semaphore có thể được sử dụng để đồng bộ hóa các luồng.","Semaphore không liên quan đến đa luồng.","Semaphore là một dạng đa luồng.",". Semaphore là một thư viện cung cấp các hàm để tạo và sử dụng đa luồng."]
     },
     {
-        q:"Chào mừng ngày Quốc khánh Việt Nam 2/9/2023, trên trang chủ của Google thể hiện hình ảnh gì?",
-        a:["Cột cờ Hà Nội","Lăng Bác Hồ","Khuê Văn Các","Bản đồ Việt Nam"]
+        q:"Biến điều kiện (condition variable) là gì?",
+        a:["Là một biến được sử dụng để đồng bộ hóa truy cập vào tài nguyên chung.","Là một biến được sử dụng để kiểm tra điều kiện trước khi thực hiện một hành động.","Là một biến được sử dụng để đánh thức một tiến trình đang bị khóa.","Là một biến được sử dụng để đưa một tiến trình vào hàng đợi."]
     },{
-        q:"Theo Luật giá 2013, đâu không phải là hàng hóa, dịch vụ thực hiện bình ổn giá?",
-        a:["Điện","Phân đạm","Mì ăn liền","Đường trắng"]
+        q:"Tình trạng giữ và đợi (hold and wait) là gì?",
+        a:["Khi một tiến trình yêu cầu tài nguyên đang được sử dụng bởi một tiến trình khác.","Khi hai tiến trình yêu cầu cùng một tài nguyên.","Khi một tiến trình đang giữ một tài nguyên và chờ một tài nguyên khác đang được giữ bởi một tiến trình khác.","Khi hệ thống không có đủ tài nguyên cho các tiến trình."]
     }
 ]
 //class="show-level"
@@ -490,14 +490,19 @@ const GAMEPLAY = `
 <div id="countdown">
     <p></p>
 </div>
-<div id="rank">
+<!-- <div id="rank">
     <i class="fa-solid fa-ranking-star"></i>
     <span>10th</span>
-</div>
+</div> -->
 
 <div id="current-level">
+    <div id="rank-box">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
     <div class="score">
-    <p>1.000.000</p>
+        <p>1.000.000</p>
     </div>
     <div id="ask">
         <div class="confirm">
@@ -886,3 +891,35 @@ const GAMEOVER =  `
         <h3>Bạn đã ra về với phanthuong</h3>
     </div>
 `
+
+const API= `https://6489866a5fa58521caafc163.mockapi.io/ailaphu`
+
+function exportData(CONFIG) {
+    const id = localStorage.getItem('WEB_AiLaPhu_id')
+    const name = localStorage.getItem('WEB_AiLaPhu_name')
+    const t = {
+        "name":name,
+        "q":[CONFIG.checkpoint]
+    }
+    fetch(API + "/" + id,{
+        method: 'POST',
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify(t)})
+    .then(
+
+    )
+    .catch(e=>{console.error(e)}    )
+}
+
+async function exportRank() {
+    await fetch(API + "/" + id,{
+        method: 'GET',
+        headers: {'content-type':'application/json'}
+    })
+    .then(
+
+    )
+    .catch(e=>{console.error(e)}    )
+}
+
+
